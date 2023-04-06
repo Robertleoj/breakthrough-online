@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breakthrough</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="status">Enter or create a room to start playing</div>
+        <div id="game-board"></div>
+        <div>
+            <label for="room-id">Room ID:</label>
+            <input id="room-id" type="text" maxlength="4">
+            <button onclick="createRoom()">Create Room</button>
+            <button onclick="joinRoom(roomIdInput.value)">Join Room</button>
+            <br>
+            <button id="flip" onclick="flipBoard()">Flip Board</button>
+            <button id="restart" onclick="restartGame()">Restart</button>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
