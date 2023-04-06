@@ -178,6 +178,10 @@ function createRoom() {
 }
 
 // Add a function to join an existing room
-function joinRoom(roomId) {
-  socket.emit("join", roomId);
+function joinRoom() {
+    // get room id 
+    roomId = document.getElementById("room-id").value;
+    console.log("joining room " + roomId)
+    socket.emit("join", roomId);
 }
+
